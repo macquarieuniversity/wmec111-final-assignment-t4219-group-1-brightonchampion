@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 19494994}
   - component: {fileID: 19494993}
   m_Layer: 0
-  m_Name: Hut
+  m_Name: Main Hut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,8 +684,8 @@ Transform:
   m_LocalScale: {x: 2.4612, y: 2.4612, z: 2.4612}
   m_Children:
   - {fileID: 1400033359}
-  - {fileID: 612617962}
   - {fileID: 1905042722}
+  - {fileID: 612617962}
   - {fileID: 230875803}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1082,7 +1082,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh18668
+  m_Name: pb_Mesh14362
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -2075,7 +2075,7 @@ Transform:
   m_LocalScale: {x: 0.4648545, y: 0.581533, z: 1.1441}
   m_Children: []
   m_Father: {fileID: 19494998}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 60, z: 0}
 --- !u!1001 &734163185
 Prefab:
@@ -3971,7 +3971,7 @@ Terrain:
   m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
-  m_ScaleInLightmap: 0.0512
+  m_ScaleInLightmap: 1
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!4 &1721376263
 Transform:
@@ -3982,7 +3982,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1939870427}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4681,5 +4682,47 @@ Transform:
   m_LocalScale: {x: 0.3, y: 2.1376562, z: 3}
   m_Children: []
   m_Father: {fileID: 19494998}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: -15.158001, z: 0}
+--- !u!1 &1939870425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1939870427}
+  - component: {fileID: 1939870426}
+  m_Layer: 0
+  m_Name: Directional Wind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!182 &1939870426
+WindZone:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939870425}
+  m_Enabled: 1
+  m_Mode: 0
+  m_Radius: 20
+  m_WindMain: 0.5
+  m_WindTurbulence: 0.5
+  m_WindPulseMagnitude: 0.1
+  m_WindPulseFrequency: 0.01
+--- !u!4 &1939870427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939870425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1721376263}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
